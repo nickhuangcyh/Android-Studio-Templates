@@ -47,14 +47,14 @@ Copy `MVPTemplate/` directory to `$ANDROID_STUDIO_LOCATION$/plugins/android/lib/
 
 ## Extended reading
 ### The Article MVP
-[Getting Started with MVP (Model View Presenter) on Android](https://github.com/googlesamples/android-architecture/tree/todo-mvp-kotlin)
+* [Getting Started with MVP (Model View Presenter) on Android](https://github.com/googlesamples/android-architecture/tree/todo-mvp-kotlin)
 
 ### MVP Sample code
-[Google MVP Sample code](https://github.com/googlesamples/android-architecture/tree/todo-mvp-kotlin)
-[Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
-[Android MVP Architecture: Enhanced with Interactors and Repositories: Sample App](https://github.com/MindorksOpenSource/android-mvp-interactor-architecture)
+* [Google MVP Sample code](https://github.com/googlesamples/android-architecture/tree/todo-mvp-kotlin)
+* [Android MVP Architecture: Sample App](https://github.com/MindorksOpenSource/android-mvp-architecture)
+* [Android MVP Architecture: Enhanced with Interactors and Repositories: Sample App](https://github.com/MindorksOpenSource/android-mvp-interactor-architecture)
 
 ### Make Template in Android Studio
-[Android Studio MVP Template Google Architecture](https://proandroiddev.com/android-studio-mvp-template-google-architecture-29c93a940341)
+* [Android Studio MVP Template Google Architecture](https://proandroiddev.com/android-studio-mvp-template-google-architecture-29c93a940341)
 [Android Template(模板) 编写 (二)](https://www.jianshu.com/p/b53e89ea5ea5)
 
