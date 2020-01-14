@@ -10,15 +10,18 @@
 <#if (isGenerateFragment)>
     <instantiate from="src/app_package/classes/Fragment.kt.ftl"
     to="${escapeXmlAttribute(srcOut)}/${fragmentName}.kt" />
-</#if>    
+</#if>
+
+<#if (isGenerateDialogFragment)>
+    <instantiate from="src/app_package/classes/DialogFragment.kt.ftl"
+    to="${escapeXmlAttribute(srcOut)}/${dialogFragmentName}.kt" />
+</#if>
     
     <instantiate from="src/app_package/classes/Presenter.kt.ftl"
     to="${escapeXmlAttribute(srcOut)}/${presenterName}.kt" />
 
-<#if (isGenerateInteractor)>
     <instantiate from="src/app_package/classes/Interactor.kt.ftl"
     to="${escapeXmlAttribute(srcOut)}/${interactorName}.kt" />
-</#if>
 
     <instantiate from="src/app_package/classes/Contract.kt.ftl"
     to="${escapeXmlAttribute(srcOut)}/${contractName}.kt" />

@@ -1,6 +1,7 @@
 package ${packageName}
 
-class ${interactorName} : ${contractName}.Interactor {
+class ${interactorName} : BaseInteractor<${contractName}.InteractorOutput>(),
+        ${contractName}.Interactor {
 
     //region Properties
 

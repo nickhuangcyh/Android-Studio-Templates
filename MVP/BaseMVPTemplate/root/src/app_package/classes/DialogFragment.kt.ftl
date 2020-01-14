@@ -1,11 +1,14 @@
 package ${packageName}
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 
-class ${fragmentName} : BaseFragment<${contractName}.Presenter>(), 
+class ${dialogFragmentName} : BaseDialogFragment<${contractName}.Presenter>(), 
         ${contractName}.View {
 
     //region Properties
@@ -23,7 +26,14 @@ class ${fragmentName} : BaseFragment<${contractName}.Presenter>(),
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.${fragmentLayoutName}, container, false)
+        val view = inflater.inflate(R.layout.${dialogFragmentLayoutName}, container, false)
+        setupView(view)
+
+        dialog.window.setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE)
+        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.setCanceledOnTouchOutside(false)
+
+        return view
     }
 
     override fun onStart() {
@@ -53,6 +63,14 @@ class ${fragmentName} : BaseFragment<${contractName}.Presenter>(),
 
     //endregion
 
+    //region Private Method
+
+    private fun setupView(view: View) {
+
+    }
+    
+    //endregion
+
     //region ${contractName}.View
     
     //endregion
@@ -60,9 +78,9 @@ class ${fragmentName} : BaseFragment<${contractName}.Presenter>(),
     companion object {
         /**
          * Use this factory method to create a new instance of
-         * @return A new instance of fragment ${fragmentName}.
+         * @return A new instance of fragment ${dialogFragmentName}.
          */
         @JvmStatic
-        fun newInstance() = ${fragmentName}()
+        fun newInstance() = ${dialogFragmentName}()
     }
 }

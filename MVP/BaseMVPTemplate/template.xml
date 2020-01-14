@@ -1,6 +1,6 @@
 <template format="4"
     revision="1"
-    name="MVP Template"
+    name="Base MVP Template"
     description="Creates a new MVP Architecture module - View, Presenter, Interactor and Contract">
     
     <category value="Architecture" />
@@ -43,11 +43,18 @@
         help="Generate a Fragment UI Layout File"/>
 
     <parameter 
-        id="isGenerateInteractor"
-        name="Generate a Interactor File"
+        id="isGenerateDialogFragment"
+        name="Generate a Dialog Fragment File"
         type="boolean"
         default="true"
-        help="Generate a Interactor File"/>
+        help="Generate a Dialog Fragment File"/>
+
+    <parameter 
+        id="isGenerateDialogFragmentLayout"
+        name="Generate a Dialog Fragment UI Layout File"
+        type="boolean"
+        default="true"
+        help="Generate a Dialog Fragment UI Layout File"/>
 
     <parameter 
         id="activityName"
@@ -70,6 +77,16 @@
         help="MVP fragment name"/>
 
     <parameter 
+        id="dialogFragmentName"
+        name="DialogFragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}DialogFragment"
+        default="MainFragment"
+        visibility="isGenerateDialogFragment"
+        help="MVP dialogFragment name"/>
+
+    <parameter 
         id="presenterName"
         name="Presenter Name"
         type="string"
@@ -85,7 +102,6 @@
         constraints="class|unique|nonempty"
         suggest="${underscoreToCamelCase(classToResource(moduleName))}Interactor"
         default="MainInteractor"
-        visibility="isGenerateInteractor"
         help="MVP interactor name"/>
 
     <parameter 
@@ -116,6 +132,16 @@
         default="fragment_custom"
         visibility="isGenerateFragmentLayout"
         help="The name of the layout to create for the fragment" />
+
+    <parameter
+        id="dialogFragmentLayoutName"
+        name="DialogFragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="dialog_fragment_${classToResource(moduleName)}"
+        default="fragment_custom"
+        visibility="isGenerateDialogFragmentLayout"
+        help="The name of the layout to create for the dialogFragment" />
     
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

@@ -2,28 +2,19 @@ package ${packageName}
 
 interface ${contractName} {
 
-    interface View {
-
-        var presenter: Presenter?
-
-        fun setupView()
+    interface View : BaseContract.View<Presenter> {
 
     }
 
-    interface Presenter {
-
-        var view: View?
-        <#if (isGenerateInteractor)>
-            var interactor: Interactor?
-        </#if>
-        
-        fun onDestory()
-    }
-
-<#if (isGenerateInteractor)>
-    interface Interactor {
+    interface Presenter : BaseContract.Presenter<View, Interactor> {
 
     }
-</#if>
     
+    interface InteractorOutput : BaseContract.InteractorOutput {
+
+    }
+
+    interface Interactor : BaseContract.Interactor<InteractorOutput> {
+
+    }
 }

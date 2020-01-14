@@ -10,4 +10,9 @@
                  to="${escapeXmlAttribute(resOut)}/layout/${fragmentLayoutName}.xml" />
 </#if>
 
+<#if (isGenerateDialogFragmentLayout)>
+    <instantiate from="src/app_package/layout/dialog_fragment_layout.xml.ftl"
+                 to="${escapeXmlAttribute(resOut)}/layout/${dialogFragmentLayoutName}.xml" />
+</#if>
+
 </recipe>
