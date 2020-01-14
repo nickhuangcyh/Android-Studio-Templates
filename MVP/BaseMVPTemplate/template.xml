@@ -1,0 +1,122 @@
+<template format="4"
+    revision="1"
+    name="MVP Template"
+    description="Creates a new MVP Architecture module - View, Presenter, Interactor and Contract">
+    
+    <category value="Architecture" />
+    <formfactor value="Mobile" />
+    
+    <parameter 
+        id="moduleName"
+        name="MVP Module Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="MVP module name"/>
+
+    <parameter 
+        id="isGenerateActivity"
+        name="Generate a Activity File"
+        type="boolean"
+        default="true"
+        help="Generate a Activity File"/>
+
+    <parameter 
+        id="isGenerateActivityLayout"
+        name="Generate a Activity UI Layout File"
+        type="boolean"
+        default="true"
+        help="Generate a Activity UI Layout File"/>
+
+    <parameter 
+        id="isGenerateFragment"
+        name="Generate a Fragment File"
+        type="boolean"
+        default="true"
+        help="Generate a Fragment File"/>
+
+    <parameter 
+        id="isGenerateFragmentLayout"
+        name="Generate a Fragment UI Layout File"
+        type="boolean"
+        default="true"
+        help="Generate a Fragment UI Layout File"/>
+
+    <parameter 
+        id="isGenerateInteractor"
+        name="Generate a Interactor File"
+        type="boolean"
+        default="true"
+        help="Generate a Interactor File"/>
+
+    <parameter 
+        id="activityName"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}Activity"
+        default="MainActivity"
+        visibility="isGenerateActivity"
+        help="MVP activity name"/>
+
+    <parameter 
+        id="fragmentName"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}Fragment"
+        default="MainFragment"
+        visibility="isGenerateFragment"
+        help="MVP fragment name"/>
+
+    <parameter 
+        id="presenterName"
+        name="Presenter Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}Presenter"
+        default="MainPresenter"
+        help="MVP presenter name"/>
+
+    <parameter 
+        id="interactorName"
+        name="Interactor Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}Interactor"
+        default="MainInteractor"
+        visibility="isGenerateInteractor"
+        help="MVP interactor name"/>
+
+    <parameter 
+        id="contractName"
+        name="Contract Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${underscoreToCamelCase(classToResource(moduleName))}Contract"
+        default="MainContract"
+        help="MVP contract name"/>
+    
+    <parameter
+        id="activityLayoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="activity_${classToResource(moduleName)}"
+        default="activity_custom"
+        visibility="isGenerateActivityLayout"
+        help="The name of the layout to create for the fragment" />
+    
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(moduleName)}"
+        default="fragment_custom"
+        visibility="isGenerateFragmentLayout"
+        help="The name of the layout to create for the fragment" />
+    
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>
