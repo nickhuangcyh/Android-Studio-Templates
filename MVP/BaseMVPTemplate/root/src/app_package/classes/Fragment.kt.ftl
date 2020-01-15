@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class ${fragmentName} : BaseFragment<${contractName}.Presenter>(), 
+class ${fragmentName} : ${baseModuleName}Fragment<${contractName}.Presenter>(), 
         ${contractName}.View {
 
     //region Properties

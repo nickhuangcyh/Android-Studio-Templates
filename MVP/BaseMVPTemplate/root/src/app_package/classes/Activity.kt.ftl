@@ -2,7 +2,7 @@ package ${packageName}
 
 import android.os.Bundle
 
-class ${activityName} : BaseActivity<${contractName}.Presenter>(), ${contractName}.View {
+class ${activityName} : ${baseModuleName}Activity<${contractName}.Presenter>(), ${contractName}.View {
 
     //region Properties
     

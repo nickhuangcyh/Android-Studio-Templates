@@ -2,7 +2,7 @@ package ${packageName}
 
 class ${presenterName}(override var view: ${contractName}.View?,
                          override var interactor: ${contractName}.Interactor?)
-    : BasePresenter<${contractName}.View, ${contractName}.Interactor>(), 
+    : ${baseModuleName}Presenter<${contractName}.View, ${contractName}.Interactor>(), 
         ${contractName}.Presenter, 
         ${contractName}.InteractorOutput {
 

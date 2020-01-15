@@ -15,6 +15,14 @@
         help="MVP module name"/>
 
     <parameter 
+        id="baseModuleName"
+        name="MVP BaseModule Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Base"
+        help="MVP basemodule name"/>
+
+    <parameter 
         id="isGenerateActivity"
         name="Generate a Activity File"
         type="boolean"
