@@ -6,6 +6,7 @@ This is an Android Studio template for MVP.
 
 ## Hierarchy
 
+##### MVPTemplate
 ```
 java.com.company.app
 	+-- ui
@@ -21,15 +22,34 @@ res
 	|	- fragment_module_name.xml
 ```
 
+##### BaseMVPTemplate
+```
+java.com.company.app
+	+-- ui
+    	+-- ModuleName
+	|	- ModuleNameFragment
+	|	- ModuleNameDialogFragment
+	|	- ModuleNameActivity
+	|	- ModuleNamePresenter
+	|	- ModuleNameInteractor
+	|	- ModuleNameContract
+res
+	+-- layout
+	|	- activity_module_name.xml
+	|	- fragment_module_name.xml
+	|	- dialog_fragment_module_name.xml
+```
+
+
 ## Installation
 
 #### For Mac:
 
-Copy `MVPTemplate/` directory to `$ANDROID_STUDIO_LOCATION$/Contents/plugins/android/lib/templates/other/`
+Copy (`MVPTemplate/`&&`BaseMVPTemplate/`) directory to `$ANDROID_STUDIO_LOCATION$/Contents/plugins/android/lib/templates/other/`
 
 #### For Windows:
 
-Copy `MVPTemplate/` directory to `$ANDROID_STUDIO_LOCATION$/plugins/android/lib/templates/other/`
+Copy (`MVPTemplate/`&&`BaseMVPTemplate/`) directory to `$ANDROID_STUDIO_LOCATION$/plugins/android/lib/templates/other/`
 
 ## How to use
 
