@@ -1,5 +1,8 @@
 # Android Studio Templates
 
+* **(iOS) UIView = (Android) View**
+* **(iOS) UIViewController = (Android) Activity/Fragment**
+
 > ## MVC
 ![image](https://miro.medium.com/max/1000/1*E9A5fOrSr0yVmc7Kly5C6A.png)
 
