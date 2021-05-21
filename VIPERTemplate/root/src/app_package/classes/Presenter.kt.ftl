@@ -11,8 +11,6 @@ class ${presenterName}(override var view: ${contractName}.View?,
 
     //region ${contractName}.Presenter
     override fun onCreate() {
-        super.onCreate()
-        
         interactor?.output = this
     }
 

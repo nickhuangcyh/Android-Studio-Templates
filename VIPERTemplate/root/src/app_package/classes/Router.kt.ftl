@@ -1,6 +1,7 @@
 package ${packageName}
 
-class ${routerName} : ${contractName}.Router {
+class ${routerName}(override var view: ${contractName}.View?) 
+    : ${contractName}.Router {
 
     //region Properties
 

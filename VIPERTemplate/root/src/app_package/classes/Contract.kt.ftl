@@ -25,7 +25,7 @@ interface ${contractName} {
     }
     
 <#if (isGenerateRouter)>
-    interactor Router {
+    interface Router {
         var view: View?
     }
 </#if>
