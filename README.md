@@ -1,7 +1,7 @@
 # Android Studio Templates
 
 ![image](https://miro.medium.com/max/700/0*4E8U5YuG22bLp4h8.)
-![image](https://miro.medium.com/max/2042/1*6W73TuYu1DWi9JY4_Uh8aA.png)
+![image](https://drive.google.com/uc?export=view&id=120d2r77DQ-hB7w5F1ysjwXqxRIrAtTzX)
 
 
 ## Installation
