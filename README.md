@@ -1,55 +1,18 @@
-# Android Studio MVP Template
-
-This is an Android Studio template for MVP. 
+# Android Studio Templates
 
 ![image](https://miro.medium.com/max/700/0*4E8U5YuG22bLp4h8.)
-
-## Hierarchy
-
-##### MVPTemplate
-```
-java.com.company.app
-	+-- ui
-    	+-- ModuleName
-	|	- ModuleNameFragment
-	|	- ModuleNameActivity
-	|	- ModuleNamePresenter
-	|	- ModuleNameInteractor
-	|	- ModuleNameContract
-res
-	+-- layout
-	|	- activity_module_name.xml
-	|	- fragment_module_name.xml
-```
-
-##### BaseMVPTemplate
-```
-java.com.company.app
-	+-- ui
-    	+-- ModuleName
-	|	- ModuleNameFragment
-	|	- ModuleNameDialogFragment
-	|	- ModuleNameActivity
-	|	- ModuleNamePresenter
-	|	- ModuleNameInteractor
-	|	- ModuleNameContract
-res
-	+-- layout
-	|	- activity_module_name.xml
-	|	- fragment_module_name.xml
-	|	- dialog_fragment_module_name.xml
-```
+![image](https://miro.medium.com/max/2042/1*6W73TuYu1DWi9JY4_Uh8aA.png)
 
 
 ## Installation
 
 #### For Mac:
 
-Copy (`MVPTemplate/`&&`BaseMVPTemplate/`) directory to `$ANDROID_STUDIO_LOCATION$/Contents/plugins/android/lib/templates/other/`
+Copy (`${ArchitectureName}Template/`) directory to `$ANDROID_STUDIO_LOCATION$/Contents/plugins/android/lib/templates/other/`
 
 #### For Windows:
 
-Copy (`MVPTemplate/`&&`BaseMVPTemplate/`) directory to `$ANDROID_STUDIO_LOCATION$/plugins/android/lib/templates/other/`
+Copy (`${ArchitectureName}Template/`) directory to `$ANDROID_STUDIO_LOCATION$/plugins/android/lib/templates/other/`
 
 ## How to use
 
